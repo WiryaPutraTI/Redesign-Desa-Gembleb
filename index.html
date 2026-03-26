@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Gembleb - Redesign</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Logo Trenggalek.png" alt=" Logo Trenggalek ">
+      <span> Desa Gembleb </span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#profil">Profil Desa</a></li>
+        <li><a href="#pelayanan">Pelayanan</a></li>
+        <li><a href="#berita">Berita</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="container-flex">
+    
+    <main>
+      <section class="hero">
+        <h1>Selamat datang di Website Resmi Desa Gembleb</h1>
+        <p>Kecamatan Pogalan Kabupaten Trenggalek</p>
+        <button class="btn-primary">Lihat Pelayanan Publik</button>
+      </section>
+
+      <section id="profil" class="profil-desa">
+        <h2>Profil Desa</h2>
+        <p>Desa Gembleb merupakan desa yang terletak di kecamatan Pogalan, Trenggalek dengan potensi UMKM dan semangat gotong royong warganya</p>
+      </section>
+
+      <section id="berita">
+        <h2> Berita terkini </h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <img src="img/PenyaluranBLT.jpeg" alt="Penyaluran BLT">
+            <div class="news-info">
+              <span class="category">Pemerintahan</span>
+              <h3>Penyaluran BLT-DD BULAN APRIL 2025</h3>
+              <p>Pemdes Gembleb melaksanakan Penyaluran Bantuan Langsung Tunai bulan April 2025 untuk 12 KPM.</p>
+            </div>
+          </article> 
+
+          <article class="news-card">
+            <img src="img/GerakanKwartirTrengggalek.jpeg" alt="Gerakan Pramuka">
+            <div class="news-info">
+              <span class="category">Sosial</span>
+              <h3> Gerakan Pramuka Kwartir Cabang Trenggalek </h3>
+              <p>Kegiatan Penyegaran Pelatih Kwarcab Trenggalek di Lapangan Condro Geni Desa Gembleb.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="img/UjianCalonPerangkatDesa.jpeg" alt="Ujian Calon Perdes">
+            <div class="news-info">
+              <span class="category">Pemerintahan</span>
+              <h3> Pelaksanaan Ujian Calon Perangkat Desa Gembleb</h3>
+              <p>Pelaksanaan ujian untuk formasi Kepala Dusun Kayujaran dan Dusun Suren berjalan lancar.</p>
+            </div>
+          </article>
+        </div>   
+      </section>
+
+      <section id="pelayanan">
+        <h2>Layanan Publik</h2>
+        <div class="layanan-grid">
+          <article class="layanan-card">
+            <h3>Administrasi Kependudukan</h3>
+            <p>Layanan pengurusan KK, KTP, dan Akta Kelahiran.</p>
+          </article>
+          <article class="layanan-card">
+            <h3>Surat Pengantaran</h3>
+            <p>Pengurusan Surat Domisili, izin usaha dan SKCK.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="potensi">
+        <h2> Potensi & UMKM Desa</h2>
+        <div class="potensi-container">
+          <article class="produk-card">
+            <img src="img/BakpiaMaharani.jpeg" alt="Bakpia">
+            <h3> Bakpia khas Gembleb </h3>
+            <p> Bakpia buatan lokal warga Desa Gembleb yang terkenal.</p>
+          </article>
+          <article class="produk-card">
+            <img src="img/Kerajinan Sapu.jpg" alt="Kerajinan Sapu">
+            <h3> Kerajinan Sapu & Tas </h3>
+            <p> Produk hasil kreativitas warga lokal.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section class="widget">
+        <h3> Jam Pelayanan </h3>
+        <ul>
+          <li><strong>Senin - Kamis :</strong> 08.00 - 15.00</li>
+          <li><strong>Jumat :</strong> 08.00 - 11.00</li>
+        </ul>
+      </section>
+      
+      <section class="widget">
+        <h3>Lokasi Kantor Desa</h3>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15802.16436665063!2d111.7371569!3d-8.0461823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e791b7027581335%3A0x5027a763a66e4a0!2sGembleb%2C%20Pogalan%2C%20Trenggalek%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1711210000000!5m2!1sen!2sid" 
+            width="100%" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+    </aside>
+  </div>
+  <footer>
+    <p> &copy; 2026 Pemerintah Desa Gembleb. Redesign by wiryadev</p>
+  </footer>
+
+</body>
+</html>

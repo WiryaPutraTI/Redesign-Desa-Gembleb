@@ -1,0 +1,246 @@
+/* --- Root Variables & Reset --- */
+:root {
+  --primary: #006400; /* Hijau Tua Khas Trenggalek */
+  --secondary: #00d2ff;
+  --dark: #1e293b;
+  --light: #f1f5f9;
+  --white: #ffffff;
+  --gray: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo img {
+  height: 45px;
+}
+
+header .logo span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('img/LandingPageGembleb.jpg'); /* Placeholder jika img/hero-bg.jpg belum ada */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* --- Main Content Layout --- */
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap; /* Supaya di HP otomatis turun ke bawah */
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 7%;
+}
+
+main {
+  flex: 3; /* Area konten lebih lebar */
+  min-width: 300px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+  border-left: 5px solid var(--secondary);
+  padding-left: 15px;
+}
+
+/* --- News Grid --- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+@media (min-width: 1200px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr); /* Paksa jadi 3 kolom */
+  }
+}
+
+.news-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 20px;
+}
+
+.news-info p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  /* Membatasi teks agar seragam */
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Layanan & Potensi --- */
+.layanan-grid, .potensi-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.layanan-card, .produk-card {
+  flex: 1;
+  min-width: 250px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.produk-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* --- Aside --- */
+aside {
+  flex: 1; /* Area sidebar lebih kecil */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.widget ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden; /* Agar sudut peta ikut melengkung */
+  margin-top: 15px;
+  line-height: 0; /* Menghilangkan gap kecil di bawah iframe */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  border-radius: 8px;
+}
+
+
+/* --- Footer --- */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
